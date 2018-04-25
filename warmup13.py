@@ -1,18 +1,7 @@
-#Christo Dragnev
-#4/25/18
-#warmup13.py - making a list of 20 random numbers between 1 and 100
+words = input('Enter a list of words: ').split(' ')
 
-from random import randint
-
-myList = []
-
-i=0
-while i<=20:
-    myList.append(randint(1,100))
-    i+=1
-print(myList)
-
-print(sum(myList))
-print(max(myList))
-print(min(myList))
-    
+good = ''
+for item in words:
+    if len(item)>len(good):
+        good = item
+print(good)
