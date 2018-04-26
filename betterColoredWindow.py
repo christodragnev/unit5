@@ -13,7 +13,7 @@ blue = Color(0x0000FF,1)
 
 colors = [red, green, blue]
 
-def Mouseclick(event):
+def mouseClick(event):
     num = randint(0,2)
     rectangle = RectangleAsset(800,800,blackOutline,colors[num])
     Sprite(rectangle)
