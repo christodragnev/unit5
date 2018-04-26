@@ -4,3 +4,7 @@
 
 words = input('Enter some words: ').split(' ')
 
+for item in words:
+    if item[0] in 'aeiouAEIOU': #starts with vowel
+        print(item)
+
