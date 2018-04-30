@@ -18,5 +18,14 @@ print('Min: ',min(L))
 print('Max: ',max(L))
 print('Mean: ', sum(L)/(len(L)))
 
-L.count(item)
-print('Median:',
+good = ''
+for item in L:
+    if L.count(item)>L.count(good):
+        good = item
+        print('Mode: ',good)
+        
+L.sort()
+if len(L)%2==0:
+    print('Median: ',L[len(L)/2-1],L[len(L)/2])
+else:
+    print('Median: ',L[len(L)/2])
