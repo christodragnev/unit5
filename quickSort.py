@@ -25,7 +25,7 @@ def partition(A,lo,hi):
         if i >= j:
             return j
         A[i], A[j] = A[j], A[i] #swap in python
-        return j
+        
     
 if __name__ == '__main__':
 
