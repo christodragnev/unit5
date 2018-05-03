@@ -7,21 +7,22 @@ from time import time
 
 N = 10 #how many numbers will be sorted
 
-def mySort(A,lo,hi):
+def mySort(A, lo, hi):
     if lo<hi:
-        p = partition(A,lo,hi)
+        p = partition(A, lo, hi)
         mySort(A,lo,p)
         mySort(A,p+1,hi)
+    return A
 
-def partition(A,lo,hi):
+def partition(A, lo, hi):
     pivot=A[lo]
     i = lo-1
     j= hi+1
     while True:
-        while A[i]<pivot:
-            i+=1
-        while A[j]>pivot:
-            j=j-1
+        while A[i] < pivot:
+            i = i + 1
+        while A[j] > pivot:
+            j = j-1
         if i >= j:
             return j
         A[i], A[j] = A[j], A[i] #swap in python
