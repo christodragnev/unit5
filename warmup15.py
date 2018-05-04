@@ -4,10 +4,13 @@
 
 
 def double(L):
-    L = []
+    new = []
+    for item in L:
+        new.append(item*2)
+    return new
     
     
-    
-print(double([1,2,3]))
+#testing
+print(double([1,2,3,4,5]))
     
 
