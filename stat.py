@@ -15,17 +15,18 @@ for num in L:
     print(num)
 
 print('Min: ',min(L))
-print('Max: ',max(L))
 print('Mean: ', sum(L)/(len(L)))
-
-good = ''
-for item in L:
-    if L.count(item)>L.count(good):
-        good = item
-        print('Mode: ',good)
         
 L.sort()
 if len(L)%2==0:
     print('Median: ',L[len(L)/2-1],L[len(L)/2])
 else:
     print('Median: ',L[len(L)/2])
+
+print('Max: ',max(L))
+
+mode = 0
+for i in range(0,len(L)):
+    if L.count(L[i]) > mode:
+        mode = L[i]
+print('Mode: ',mode)
